@@ -1,0 +1,232 @@
+.card-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+}
+
+.float-card,
+.rating-card {
+  position: absolute;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.float-card {
+  padding: 18px;
+  animation: floatIn 0.6s ease both;
+}
+
+.card-tv {
+  top: 40px;
+  right: 10px;
+  width: 208px;
+  z-index: 3;
+  animation-delay: 0.1s;
+}
+
+.card-ac {
+  top: 165px;
+  left: 52px;
+  width: 200px;
+  z-index: 2;
+  animation-delay: 0.2s;
+}
+
+.card-wm {
+  top: 148px;
+  left: 122px;
+  width: 196px;
+  z-index: 1;
+  opacity: 0.97;
+  animation-delay: 0.3s;
+}
+
+/* Icon chips */
+.card-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.chip-tv { background: #fff3d8; }
+.chip-ac { background: #eef4fb; }
+.chip-wm { background: #edf9f3; }
+
+/* TV icon */
+.icon-tv {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 13px;
+  border: 2px solid #d18b0e;
+  border-radius: 3px;
+}
+.icon-tv::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 8px;
+  height: 2px;
+  background: #d18b0e;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* AC icon */
+.icon-ac {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 10px;
+  border-radius: 10px;
+  border: 2px solid #5e8cb7;
+}
+.icon-ac::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: -6px;
+  height: 2px;
+  background: #5e8cb7;
+  border-radius: 999px;
+}
+
+/* WM icon */
+.icon-wm {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 18px;
+  border: 2px solid #4cab79;
+  border-radius: 4px;
+}
+.icon-wm::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border: 2px solid #4cab79;
+  border-radius: 999px;
+  transform: translate(-50%, -30%);
+}
+
+/* Card text */
+.card-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card-title {
+  margin-top: 8px;
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--text);
+}
+
+.card-price {
+  margin-top: 10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--brand);
+}
+
+.card-price span {
+  color: var(--muted);
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.meta-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.most-booked {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Rating card */
+.rating-card {
+  right: 8px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 180px;
+  padding: 14px 18px;
+  z-index: 4;
+  animation: floatIn 0.6s ease 0.4s both;
+}
+
+.rating-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: var(--text);
+}
+
+.rating-text {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .card-tv  { right: 0; width: 170px; }
+  .card-ac  { top: 170px; left: 0; width: 180px; }
+  .card-wm  { top: 152px; left: 56px; width: 176px; }
+  .rating-card { width: 160px; right: 0; }
+}

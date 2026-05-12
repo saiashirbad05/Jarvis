@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #fcfbf8;
+  --surface: #ffffff;
+  --surface-soft: #f7f4ee;
+  --brand: #1c446b;
+  --brand-strong: #173a5b;
+  --accent: #eb5b31;
+  --accent-soft: #fff1eb;
+  --text: #172033;
+  --muted: #687385;
+  --border: #e7e1d8;
+  --line: #f1ede6;
+  --success: #2ea56b;
+  --shadow-soft: 0 12px 30px rgba(25, 39, 64, 0.08);
+  --shadow-card: 0 20px 45px rgba(20, 34, 54, 0.08);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, button, input, select, textarea {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* ── Layout ── */
+.container {
+  width: min(calc(100% - 40px), var(--max-width));
+  margin: 0 auto;
+}
+
+/* ── Typography utilities ── */
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+}
+
+.section-copy {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(28, 68, 107, 0.18);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--brand-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(28, 68, 107, 0.22);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: #d7d1c8;
+  background: #fffdfa;
+}
+
+/* ── Stars ── */
+.stars {
+  display: inline-flex;
+  gap: 4px;
+  margin-right: 10px;
+  color: #f2ab22;
+  letter-spacing: 0.06em;
+}
+
+/* ── Section spacing ── */
+.section {
+  padding: 90px 0 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: min(calc(100% - 24px), var(--max-width));
+  }
+  .section {
+    padding: 64px 0 0;
+  }
+}
+
+.login-image-panel { display: none; } 
+@media (min-width: 768px) { .login-image-panel { display: flex !important; } }
+
+/* ── Homepage Font Context (matches global new fonts) ── */
+.homepage-style-context,
+.homepage-style-context button,
+.homepage-style-context input,
+.homepage-style-context select,
+.homepage-style-context textarea {
+  font-family: 'Manrope', sans-serif;
+}
+
+.homepage-style-context h1,
+.homepage-style-context h2,
+.homepage-style-context h3,
+.homepage-style-context h4,
+.homepage-style-context h5,
+.homepage-style-context h6,
+.homepage-style-context .section-title,
+.homepage-style-context .logo-text,
+.homepage-style-context .eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ⚡ HIGH PERFORMANCE & TACTILE SNAPPINESS ENHANCEMENTS ⚡ */
+
+/* 1. GPU Hardware Acceleration to prevent browser animation rendering bottlenecks */
+a, button, .btn, img, select, input, .nav-links a {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* 2. Snappy Active State tactile scale-down animations for instant feedback */
+a:active, 
+button:active, 
+.btn:active,
+.logo:active,
+.nav-links a:active {
+  transform: scale(0.97) translateZ(0) !important;
+  -webkit-transform: scale(0.97) translateZ(0) !important;
+  transition: transform 0.08s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 3. Extremely responsive standard hover transition timing (snappy 120ms) */
+.btn, .nav-links a, button, select, input {
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 🎨 [UI-3] Premium Aubergine Dark Mode Theme Variables */
+[data-theme="dark"] {
+  --bg: #0a0914; /* Deep Aubergine dark space */
+  --surface: #121021; /* High-quality glass surface */
+  --surface-soft: #1c1830;
+  --brand: #3b82f6; /* Electric blue neon */
+  --brand-strong: #2563eb;
+  --accent: #f43f5e; /* Cyber rose */
+  --accent-soft: #270c14;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #221d42;
+  --line: #17142e;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] select,
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: var(--surface-soft);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .result-card,
+[data-theme="dark"] .contact-card {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+[data-theme="dark"] .results-navigation-header {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+}
+
+/* 📱 App-Wide Responsive Mobile Utility Classes */
+.responsive-grid-2col {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.responsive-grid-1-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr !important;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .responsive-grid-1-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .mobile-stack-column {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2rem !important;
+  }
+  .mobile-reverse-order {
+    order: unset !important;
+  }
+  .mobile-padding-reduce {
+    padding: 3rem 1rem !important;
+  }
+}
+
+/* ── Login Page Responsiveness ── */
+@media (max-width: 850px) {
+  .login-image-panel {
+    display: none !important;
+  }
+  .login-form-panel {
+    padding: 1.5rem 1rem !important;
+  }
+}

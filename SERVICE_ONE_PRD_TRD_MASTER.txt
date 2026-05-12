@@ -1,0 +1,890 @@
+# Service-One Master PRD + TRD
+
+Version: 1.0
+Status: Production-ready planning document for MVP and scalable web build
+Product Name: Service-One
+Document Type: Combined PRD + TRD in one file
+Primary UI Reference (chosen final): C:\Users\saswa\Downloads\serviceone_landing_page.html
+Primary Logo Reference: C:\Users\saias\OneDrive\Pictures\Documents\New project\artifacts\logo-exact\service-one-logo-from-reference.png
+
+UI Preview:
+- final approved landing page implementation is saved at:
+- C:\Users\saswa\Downloads\serviceone_landing_page.html
+
+======================================================================
+1. EXECUTIVE SUMMARY
+======================================================================
+
+Service-One is a web platform for checking whether a home appliance repair or installation quote is fair before the customer pays. The user enters location, appliance, service, and quoted price. Service-One then compares the quote against local market data, nearby provider data, historical community reports, trust signals, and brand-related service guidance.
+
+The product promise is simple:
+
+"Know the fair price before you pay."
+
+The goal is to reduce overcharging, hidden charges, and low-trust mechanic selection in the Indian home appliance service market.
+
+The selected product experience must feel:
+
+- clean
+- premium
+- simple
+- trust-first
+- local
+- human
+- exact to the approved landing page style
+
+This document combines both product requirements and technical requirements in one production-ready text file so the website can be designed, developed, tested, deployed, and scaled without ambiguity.
+
+======================================================================
+2. PRODUCT VISION
+======================================================================
+
+Service-One helps households make better service decisions for appliances by giving a fast, understandable, and trustworthy quote check before they commit to a payment.
+
+The platform should become a trusted consumer utility for:
+
+- AC installation and repair
+- fridge repair
+- washing machine repair
+- TV repair
+- RO service
+- geyser repair or installation
+
+Long-term, Service-One can become a broader household service intelligence platform, but the MVP must stay focused on appliance quote fairness.
+
+======================================================================
+3. PROBLEM STATEMENT
+======================================================================
+
+Users often receive repair or installation quotes without knowing:
+
+- whether the quote is fair
+- whether parts and labor are reasonably priced
+- whether the provider is trustworthy
+- whether the provider is using fake urgency or hidden charges
+- whether better options exist nearby
+
+As a result, users overpay, choose weak service providers, or delay important repairs because they do not trust the process.
+
+======================================================================
+4. TARGET USERS
+======================================================================
+
+Primary users:
+
+- homeowners
+- renters
+- families booking local repair services
+- people comparing appliance installation charges
+
+Secondary users:
+
+- local appliance service providers
+- independent mechanics
+- small service centers
+- admin and moderation team
+
+======================================================================
+5. CORE VALUE PROPOSITION
+======================================================================
+
+Service-One gives users:
+
+- a fair local price estimate
+- a quote verdict
+- nearby provider comparison
+- better confidence before payment
+- trust and review-based guidance
+- a clean downloadable summary
+
+======================================================================
+6. MVP SCOPE
+======================================================================
+
+The MVP will include:
+
+- appliance quote checking
+- area or city based locality input
+- appliance selection
+- service selection
+- quoted price input
+- fair range output
+- verdict output: fair, high, suspicious, low
+- provider comparison list
+- trust indicators
+- community report contribution
+- downloadable result summary
+- Google OAuth login
+- English and Hindi support
+- admin dashboard
+
+The MVP will not initially require:
+
+- phone OTP
+- full payment integration
+- provider subscription billing
+- native mobile app
+- live chat support
+
+======================================================================
+7. APPLIANCE CATEGORIES
+======================================================================
+
+Supported in MVP:
+
+- AC
+- Fridge
+- Washing Machine
+- TV
+- RO
+- Geyser
+
+Each category must support common service types such as:
+
+- installation
+- inspection
+- cooling issue
+- not starting
+- leakage
+- gas refill
+- maintenance
+- filter replacement
+- general repair
+
+======================================================================
+8. KEY FEATURES
+======================================================================
+
+8.1 Quote Check Engine
+
+- user enters area or city
+- user selects appliance
+- user selects service type
+- user enters quoted price
+- platform checks fair range
+- platform returns verdict
+
+8.2 Fair Price Result
+
+- quoted amount shown clearly
+- local fair range shown clearly
+- confidence or quality note
+- verdict badge
+- supporting explanation
+
+8.3 Provider Discovery
+
+- nearby providers within target radius
+- rank by fairness, reliability, and relevance
+- provider cards with price signals
+- service area relevance
+
+8.4 Trust Layer
+
+- review quality checks
+- suspicious listing signals
+- reliability pattern checks
+- provider consistency flags
+
+8.5 Community Reports
+
+- users can submit their quote details
+- users can upload bill or quote image
+- approved entries improve data quality
+
+8.6 Downloadable Summary
+
+- user can download result report
+- useful for later comparison or family sharing
+
+8.7 Authentication
+
+- Google OAuth only in MVP
+
+8.8 Admin Tools
+
+- manage users
+- manage providers
+- review quote submissions
+- approve or reject community entries
+- ban abuse or spam
+
+======================================================================
+9. PRIMARY USER FLOW
+======================================================================
+
+1. User opens the website.
+2. User lands on a clean trust-focused landing page.
+3. User enters area or city.
+4. User selects appliance.
+5. User selects service type.
+6. User enters quoted price.
+7. User clicks quote check CTA.
+8. Backend runs price analysis workflow.
+9. User sees result card with:
+   - quoted price
+   - fair range
+   - verdict
+   - explanation
+   - option to view details
+10. User may compare nearby providers.
+11. User may sign in and save or submit report.
+12. User may download the final report.
+
+======================================================================
+10. PAGES TO BUILD
+======================================================================
+
+10.1 Landing Page
+
+Purpose:
+
+- introduce Service-One clearly
+- collect quote-check input immediately
+- establish trust
+
+Must include:
+
+- hero structure matching the approved landing page implementation
+- top navigation
+- branded CTA button
+- trust badge above hero copy
+- floating appliance service cards in hero visual
+- primary CTA and secondary CTA
+- review and locality trust row
+- service ticker strip
+- organized feature cards for target users
+- transparent pricing cards
+- testimonial section
+- closing CTA section
+- structured footer
+
+10.2 Quote Check Page
+
+Purpose:
+
+- focused form flow for quote checking
+
+Must include:
+
+- all required fields
+- validation
+- loading state
+- repeat check option
+
+10.3 Result Details Page
+
+Purpose:
+
+- explain why the quote is fair or unfair
+
+Must include:
+
+- quoted amount
+- fair range
+- verdict
+- nearby comparison
+- explanation factors
+- trust flags
+- action suggestions
+
+10.4 Provider Comparison Page
+
+Purpose:
+
+- compare nearby providers
+
+Must include:
+
+- provider cards
+- approximate local rate signals
+- trust indicators
+- distance if available
+- review summary
+
+10.5 Login Page
+
+Purpose:
+
+- Google sign-in
+
+Must include:
+
+- single clean login action
+- privacy explanation
+
+10.6 User Dashboard
+
+Purpose:
+
+- user history and saved reports
+
+Must include:
+
+- previous quote checks
+- saved result cards
+- submitted community reports
+- downloadable files
+
+10.7 Community Reports Page
+
+Purpose:
+
+- browse approved community-submitted reports
+
+Must include:
+
+- appliance filters
+- city filters
+- anonymized price data
+- report counts
+
+10.8 Report Submission Page
+
+Purpose:
+
+- allow user to submit real quote data
+
+Must include:
+
+- appliance selection
+- service selection
+- location details
+- provider name field
+- quoted price field
+- bill upload optional
+- privacy notice
+- submit action
+
+10.9 Admin Dashboard
+
+Purpose:
+
+- content moderation
+- user management
+- data quality monitoring
+
+Must include:
+
+- pending report review queue
+- user account management
+- flagged review management
+- provider approval list
+
+======================================================================
+11. UI REQUIREMENTS
+======================================================================
+
+11.1 Color Palette
+
+Primary colors:
+
+- warm near-white background for landing
+- deep service blue for primary actions and featured cards
+- bright orange accent for emphasis text and micro-highlights
+- soft gray-beige borders
+- subtle shadows with no glossy gradients
+
+Brand rules:
+
+- do not use heavy blacks
+- do not introduce unrelated neon or synthetic colors
+- do not use glossy AI-style gradients
+- orange should be used as a focused accent, not as a full-surface theme
+
+11.2 Typography
+
+Suggested choices:
+
+- headline: bold geometric display face
+- body: clean readable sans-serif
+- scale: responsive fluid scale
+- headings should feel compact, strong, and confident rather than airy and luxury-editorial
+
+11.3 Component Softness
+
+- rounded corners for cards and buttons
+- soft shadows rather than strong elevation
+- minimal contrast shocks
+- card surfaces should feel crisp and practical, not dreamy or glassy
+
+11.4 Hero Pattern
+
+- left-aligned oversized headline
+- orange emphasis on the core promise line
+- supporting body copy under the headline
+- two CTA buttons below hero copy
+- trust rating line below CTA row
+- stacked floating appliance service cards on the right
+- one small floating rating card near the stack
+
+This composition must remain stable and match the approved landing page implementation.
+
+======================================================================
+12. DESIGN ASSETS AND BRANDING
+======================================================================
+
+Logo:
+
+- Service-One logo provided
+- reference location: C:\Users\saias\OneDrive\Pictures\Documents\New project\artifacts\logo-exact\service-one-logo-from-reference.png
+
+Illustrations:
+
+- AC sketch
+- fridge sketch
+- washing machine sketch
+- TV sketch
+- RO sketch
+- geyser sketch
+
+Illustration style:
+
+- line-art outline style
+- neutral single-tone color
+- no excessive detail
+- clean minimal strokes
+
+Chosen UI Reference:
+
+- C:\Users\saswa\Downloads\serviceone_landing_page.html
+
+Approved visual direction:
+
+- clean consumer-services layout
+- professional and organized structure
+- minimal emoji use
+- CSS or icon-based appliance cues preferred over emoji-first cards
+- strong hierarchy with practical spacing
+- subtle motion or hover effects only where useful
+
+======================================================================
+13. LANGUAGE AND LOCALIZATION
+======================================================================
+
+MVP supports:
+
+- English
+- Hindi
+
+Language selection:
+
+- header toggle
+- stored preference post-login
+
+All user-facing text should be:
+
+- simple
+- conversational
+- translatable
+
+Avoid:
+
+- jargon
+- slang
+- English-only idioms
+
+======================================================================
+14. RESULT AND VERDICT LOGIC
+======================================================================
+
+Verdict categories:
+
+- fair: quote matches local range closely
+- high: quote is above fair range but not extreme
+- suspicious: quote is significantly above fair range or contains red flags
+- low: quote is unusually low, possibly indicating quality concerns or fake estimates
+
+Confidence levels:
+
+- high: strong market data and multiple provider comparisons
+- medium: limited market data
+- low: insufficient local data
+
+======================================================================
+15. PROVIDER DISCOVERY AND RANKING
+======================================================================
+
+Provider discovery flow:
+
+- extract location from user input
+- search provider database
+- filter by appliance category support
+- filter by service area match
+- rank by reliability score
+- rank by price fairness
+- rank by review quality
+- return top matches
+
+Provider cards include:
+
+- name
+- location relevance
+- typical pricing indicator
+- reliability indicator
+- summary review quality
+
+======================================================================
+16. INTELLIGENT BACKEND DESIGN
+======================================================================
+
+The backend is powered by a multi-agent pricing intelligence system using ADK and Vertex AI. Agents work behind the scenes to combine pricing data, community data, brand guidelines, locality signals, and trust patterns.
+
+Suggested agent roles:
+
+1. Locality Price Agent
+- fetches local market pricing signals for appliance and service
+
+2. Provider Comparison Agent
+- identifies nearby providers and approximate service charges
+
+3. Community Report Analyzer Agent
+- summarizes community-submitted quote reports for appliance and area
+
+4. Trust and Red Flag Detector Agent
+- checks for suspicious quote patterns or outliers
+- checks official service guidance where relevant
+
+5. Final Advisor Agent
+- combines all signals into one result
+
+Recommended model split:
+
+- agents 1 to 4: Gemini Flash-Lite
+- final synthesis agent: Gemini Flash
+
+Reason:
+
+- lower cost
+- good speed
+- enough quality for MVP
+
+======================================================================
+17. BACKEND SERVICE DESIGN
+======================================================================
+
+Suggested API groups:
+
+- auth
+- quote-check
+- provider-search
+- reports
+- uploads
+- admin
+
+Core endpoints:
+
+- POST /api/quote-check
+- GET /api/providers
+- POST /api/reports
+- POST /api/uploads
+- GET /api/user/history
+- GET /api/admin/dashboard
+
+Example quote-check request fields:
+
+- city
+- area
+- appliance
+- service_type
+- quoted_price
+- user_language
+
+Example quote-check response fields:
+
+- verdict
+- quoted_price
+- fair_range_min
+- fair_range_max
+- explanation
+- provider_suggestions
+- confidence
+- report_id
+
+======================================================================
+18. DATA MODEL SUMMARY
+======================================================================
+
+Suggested tables:
+
+- users
+- user_sessions
+- quote_checks
+- providers
+- provider_service_areas
+- provider_reviews_summary
+- community_reports
+- report_images
+- moderation_actions
+- admin_users
+- cached_market_signals
+
+Key stored fields:
+
+users:
+- id
+- google_id
+- name
+- email
+- language_preference
+- role
+
+quote_checks:
+- id
+- user_id
+- city
+- area
+- appliance
+- service_type
+- quoted_price
+- fair_range_min
+- fair_range_max
+- verdict
+- explanation
+- created_at
+
+community_reports:
+- id
+- user_id
+- city
+- area
+- appliance
+- service_type
+- provider_name
+- quoted_price
+- approved_status
+- proof_image_url
+
+providers:
+- id
+- name
+- city
+- area
+- appliance_types
+- reliability_score
+- avg_price_range
+- is_active
+
+======================================================================
+19. FRONTEND IMPLEMENTATION RULES
+======================================================================
+
+19.1 Design fidelity rule
+
+The landing page implementation must match the approved landing page implementation exactly in:
+
+- section order
+- hero placement
+- button placement
+- card placement
+- floating service card placement
+- ticker strip placement
+- color accents
+- border softness
+- whitespace rhythm
+
+19.2 Component breakdown
+
+Suggested components:
+
+- Header
+- HeroSection
+- ServiceTrustBadge
+- HeroServiceCardStack
+- HeroRatingCard
+- ServiceTicker
+- AudienceCardGrid
+- PricingCardGrid
+- TestimonialBlock
+- ClosingCTA
+- Footer
+
+19.3 Styling rules
+
+- warm near-white page background
+- soft gray borders
+- subtle shadows only
+- keep dark blue for primary CTAs and the featured pricing card
+- use orange only for emphasis text, dots, tags, and small highlights
+- avoid overusing emoji and avoid decorative gloss effects
+- use the approved HTML landing page as implementation target
+
+======================================================================
+20. MOBILE AND RESPONSIVE RULES
+======================================================================
+
+Desktop:
+
+- follow approved landing page almost exactly
+
+Tablet:
+
+- keep hero balanced with text first and visuals second
+- stack floating cards more carefully
+- preserve hierarchy
+
+Mobile:
+
+- logo and nav collapse cleanly
+- headline remains dominant
+- hero cards stack or scale without collision
+- pricing cards become vertical
+- ticker remains readable or can become a simple wrapped row
+
+Do not lose the airy premium feel on mobile.
+
+======================================================================
+21. SECURITY AND TRUST
+======================================================================
+
+- Google OAuth for authentication
+- validate all form inputs
+- rate limit report submissions
+- sanitize uploaded images
+- admin role-based protection
+- basic abuse moderation
+- privacy-first handling for uploaded bills or quotes
+
+======================================================================
+22. UPLOADS AND COMMUNITY REPORTS
+======================================================================
+
+Users can optionally upload:
+
+- quote screenshots
+- bills
+- handwritten estimate photos
+
+Rules:
+
+- uploads stored securely
+- file type validation required
+- content moderation queue required
+- personally sensitive data may need masking in future
+
+======================================================================
+23. PRODUCTION DEPLOYMENT PLAN
+======================================================================
+
+Frontend deployment:
+
+- build React app
+- deploy to Cloud Run or static hosting behind CDN
+
+Backend deployment:
+
+- FastAPI service on Cloud Run
+- env vars for configuration
+- service account for cloud integrations
+
+Required production services:
+
+- Cloud Run
+- Vertex AI
+- Cloud Storage
+- Postgres or Supabase
+- Redis or cache layer
+- Secret Manager
+- Cloud Logging
+
+======================================================================
+24. MONITORING AND OPERATIONS
+======================================================================
+
+- backend request logs
+- error tracking
+- quote-check latency metrics
+- upload failure logs
+- admin moderation audit logs
+- provider search failures
+
+Operational dashboards should monitor:
+
+- total quote checks
+- median response time
+- failed requests
+- report submissions
+- moderation queue size
+
+======================================================================
+25. DEVELOPMENT PHASES
+======================================================================
+
+Phase 1:
+
+- static landing page faithful to chosen UI
+- working quote form UX
+- mocked result preview
+
+Phase 2:
+
+- FastAPI backend
+- quote-check API
+- stored history
+
+Phase 3:
+
+- ADK agent integration
+- Vertex AI pricing logic
+- provider suggestions
+
+Phase 4:
+
+- community reports
+- uploads
+- moderation
+
+Phase 5:
+
+- admin dashboard
+- analytics
+- production hardening
+
+======================================================================
+26. MVP ACCEPTANCE CRITERIA
+======================================================================
+
+The MVP is ready when:
+
+- landing page matches selected UI closely
+- quote form is working
+- result page returns fair range and verdict
+- Google login works
+- user can save quote history
+- community submission flow works
+- admin can review reports
+- deployment is stable in production
+
+======================================================================
+27. STRICT BUILD NOTES FOR DESIGN AND DEVELOPMENT
+======================================================================
+
+Important:
+
+- The approved landing page file is the direct design target.
+- Do not reinterpret it into a glossy AI-generated visual style.
+- Do not overload the UI with emojis.
+- Do not introduce a different homepage composition.
+- Do not mismatch hero scale, margin rhythm, or card softness.
+- Keep the design feeling real, practical, and service-oriented.
+
+If any team member designs or codes the landing page, they must use the approved file below as the source of truth:
+
+C:\Users\saswa\Downloads\serviceone_landing_page.html
+
+======================================================================
+28. FINAL RECOMMENDATION
+======================================================================
+
+Build Service-One as a trust-first consumer web product with:
+
+- one exact premium landing page based on the approved implementation
+- a simple quote check workflow
+- intelligent but hidden backend complexity
+- strong local relevance
+- a clean consumer-facing explanation layer
+
+The user-facing front must remain simple.
+The intelligence must live behind the scenes.
+
+That combination is the right direction for Service-One.
